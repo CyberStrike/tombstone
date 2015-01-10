@@ -20,14 +20,17 @@
 class CoinKite
   require 'httparty'
   require 'time'
-
   include HTTParty
+
+  attr_accessor :API_KEY, :API_SECRET
 
   base_uri 'https://api.coinkite.com'
   maintain_method_across_redirects true
 
 
-  def initialize
+  def initialize(key, secret)
+    self.API_KEY = key
+    self.API_SECRET = secret
   end
 
   def permissions
@@ -54,16 +57,14 @@ class CoinKite
 
   private
 
-  API_KEY = 'K6638a8d7-e4587cb3-94a8672b9ede77a8'
-  API_SECRET = 'Saa414d23-42e45f58-865ed630971a5295'
+
 
   def sign(endpoint)
-    require 'cgi'
     require 'openssl'
 
     ts = Time.now.utc.iso8601
     data = endpoint + '|' + ts
-    hmac = OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('SHA256'), API_SECRET, data)
+    hmac = OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('SHA256'), self.API_SECRET, data)
 
     return hmac
   end
@@ -75,7 +76,7 @@ class CoinKite
   def build_headers(endpoint)
 
     self.class.headers({
-     'X-CK-Key' => API_KEY,
+     'X-CK-Key' => self.API_KEY,
      'X-CK-Sign' => sign(endpoint),
      'X-CK-Timestamp' => timestamp
      })
@@ -83,5 +84,5 @@ class CoinKite
 
 end
 
-ck = CoinKite.new
-p ck.check_permissions
+# ck = CoinKite.new("K6638a8d7-e4587cb3-94a8672b9ede77a8","Saa414d23-42e45f58-865ed630971a5295")
+# p ck.check_permissions
