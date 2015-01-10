@@ -2,15 +2,13 @@
   <div class="navbar col-sm-12" role="navigation">
       <div class="navbar-header">
           <button type="button" class="navbar-toggle"></button>
-          <a class="brand" href="#">Startup</a>
+          <%= link_to "Tombstone", root_path, :class=>"brand" %>
+          
        </div>
       <div class="collapse navbar-collapse pull-right">
           <ul class="nav pull-left">
             <%= render 'layouts/navigation_links' %>
           </ul>
-          <form class="navbar-form pull-left">
-              <a class="btn btn-success" href="#">Buy Now</a>
-          </form>
       </div>
   </div>
 </div>
