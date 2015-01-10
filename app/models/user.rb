@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  has_many :wallets, dependent: :destroy
+  has_one :claims, dependent: :destroy
+
+
   # Use friendly_id on Users
   extend FriendlyId
   friendly_id :friendify, use: :slugged

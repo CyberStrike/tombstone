@@ -27,8 +27,8 @@ gem 'font-awesome-sass', '4.2.2'
 gem 'bootstrap-sass', '3.3.1.0'
 
 group :development, :test do
-  gem 'byebug', '3.5.1'
-  gem 'web-console', '2.0.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 
   # Figaro: https://github.com/laserlemon/figaro
   gem 'figaro', '1.0.0'
@@ -45,17 +45,14 @@ end
 # Devise: https://github.com/plataformatec/devise
 gem 'devise', '3.4.1'
 
-# Rails 12factor for Heroku: https://github.com/heroku/rails_12factor
 group :production do
-  gem 'rails_12factor'
+  gem 'rails_12factor' # Rails 12factor for Heroku: https://github.com/heroku/rails_12factor
+  gem 'pg'# PostgreSQL gem for Heroku
+  gem 'unicorn', platforms: [:ruby] # Unicorn: http://unicorn.bogomips.org
 end
+<<<<<<< HEAD
 
 # PostgreSQL gem for Heroku
 group :production do
   gem 'pg'
-end
-
-# Unicorn: http://unicorn.bogomips.org
-group :production do
-  gem 'unicorn'
 end
