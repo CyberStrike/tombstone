@@ -1,5 +1,5 @@
 Tombstone::Application.routes.draw do
-  get 'wallet/index'
+  resources :wallets
 
   root "pages#home"    
   get "home", to: "pages#home", as: "home"
