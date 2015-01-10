@@ -1691,13 +1691,14 @@ section * {
   font-size: 40px;
   font-weight: normal;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #7f8c8d;
+  color: #ffffff;
   background: #1abc9c;
   font-weight: 300;
   -webkit-transition: 0.25s color, 0.25s background-color;
   -moz-transition: 0.25s color, 0.25s background-color;
   -o-transition: 0.25s color, 0.25s background-color;
   transition: 0.25s color, 0.25s background-color;
+  text-transform:uppercase;
 }
 .content-12 .btn-wide:hover,
 .content-12 .btn-wide:focus,

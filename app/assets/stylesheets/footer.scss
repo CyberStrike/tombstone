@@ -1969,15 +1969,16 @@ section * {
  * Footer 12 stylesheet  
  * */
 .footer-12 {
-  padding-top: 190px;
+  padding-top: 110px;
   padding-bottom: 110px;
   text-align: center;
   font-size: 84.3px;
   font-weight: normal;
-  color: rgba(44, 62, 80, 0.2);
+  color: rgba(44, 62, 80, 0.6);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 800;
   letter-spacing: -2px;
+  background: rgba(1, 1, 1, 0.1)
 }
 .footer-12:before {
   content: '';
@@ -1999,7 +2000,7 @@ section * {
   .footer-12 {
     font-size: 84px;
     font-weight: normal;
-    color: rgba(44, 62, 80, 0.2);
+    color: rgba(44, 62, 80, 0.6);
     font-weight: 800;
   }
 }
@@ -2012,7 +2013,7 @@ section * {
   .footer-12 {
     font-size: 56px;
     font-weight: normal;
-    color: rgba(44, 62, 80, 0.2);
+    color: rgba(44, 62, 80, 0.6);
     font-weight: 800;
   }
 }
@@ -2020,7 +2021,7 @@ section * {
   .footer-12 {
     font-size: 36px;
     font-weight: normal;
-    color: rgba(44, 62, 80, 0.2);
+    color: rgba(44, 62, 80, 0.6);
     font-weight: 800;
   }
   .footer-12 [class*="fui-"] {
@@ -2031,7 +2032,7 @@ section * {
   .footer-12 {
     font-size: 26px;
     font-weight: normal;
-    color: rgba(44, 62, 80, 0.2);
+    color: rgba(44, 62, 80, 0.6);
     padding-top: 150px;
     font-weight: 800;
   }
