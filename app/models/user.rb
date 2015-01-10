@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :wallets, dependent: :destroy
   has_one :claims, dependent: :destroy
+  has_one :preference
 
 
   # Use friendly_id on Users
