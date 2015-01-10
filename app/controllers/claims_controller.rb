@@ -10,6 +10,13 @@ class ClaimsController < ApplicationController
 		@claim = Claim.new
 	end
 
+	def edit
+	end
+
+	def show
+		@claim = Claim.find_by(params[:id])
+	end
+
 	def create
 		@claim = Claim.new(claim_params)
 		
@@ -51,8 +58,8 @@ class ClaimsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:claim).permit(:email, :status, :keyone, :keytwo)
+    def claim_params
+      params.require(:claim).permit(:email, :status, :keyone, :keytwo, :btcaddy)
     end
 	
 end
