@@ -45,11 +45,8 @@ end
 # Devise: https://github.com/plataformatec/devise
 gem 'devise', '3.4.1'
 
-
 group :production do
   gem 'rails_12factor' # Rails 12factor for Heroku: https://github.com/heroku/rails_12factor
   gem 'pg'# PostgreSQL gem for Heroku
   gem 'unicorn', platforms: [:ruby] # Unicorn: http://unicorn.bogomips.org
 end
-# PC users
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
