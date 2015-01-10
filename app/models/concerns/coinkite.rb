@@ -54,8 +54,8 @@ class CoinKite
 
   private
 
-  API_KEY = 'K67794d90-ecaee296-312f2895f5d29563'
-  API_SECRET = 'Saab308e3-a190763a-7fa22c7bee3679cf'
+  API_KEY = 'K6638a8d7-e4587cb3-94a8672b9ede77a8'
+  API_SECRET = 'Saa414d23-42e45f58-865ed630971a5295'
 
   def sign(endpoint)
     require 'cgi'
@@ -82,3 +82,6 @@ class CoinKite
   end
 
 end
+
+ck = CoinKite.new
+p ck.check_permissions
