@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150110153659) do
+ActiveRecord::Schema.define(version: 20150110154055) do
 
   create_table "claims", force: :cascade do |t|
     t.string   "email"
@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 20150110153659) do
     t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "claimed"
+    t.string   "private"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
