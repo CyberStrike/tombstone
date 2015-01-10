@@ -47,6 +47,10 @@ class CoinKite
     self.class.get(endpoint)
   end
 
+  def check_permissions
+    permissions["api_key"]["permissions"].include? ("send" && "read" && "send2" && "xfer")
+ end
+
 
   private
 
@@ -78,14 +82,3 @@ class CoinKite
   end
 
 end
-
-def check_permissions
-    ck = CoinKite.new
-    ck.permissions["api_key"]["permissions"]
-end
-
-
-p check_permissions
-
-
-
