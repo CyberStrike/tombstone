@@ -1,10 +1,11 @@
 class WalletController < ApplicationController
   before_action :set_wallet, only: [:show, :edit, :update, :destroy]
   def index
-    @wallet = Wallet.all
+    @wallets = Wallet.all
   end
 
   def show
+    @wallet = Wallet.find_by(params(:id))
   end
 
   # GET /wallet/new
