@@ -50,7 +50,6 @@ group :production do
   gem 'pg'# PostgreSQL gem for Heroku
   gem 'unicorn', platforms: [:ruby] # Unicorn: http://unicorn.bogomips.org
 end
-<<<<<<< HEAD
 
 # PostgreSQL gem for Heroku
 group :production do
