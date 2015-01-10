@@ -4,9 +4,9 @@
 
 <% @claims.each do |claim| %>
   <div class="status">
-    <strong><%= claim.status %></strong>
-    
-    <p><%= claim.email %></p>
+    <strong>Bitcoin Wallet Address: <%= claim.btcaddy %></strong>
+    <p>Email: <%= claim.email %></p>
+    <p>Status: <%= claim.status %></p>
     <div class="meta">
       <%= link_to time_ago_in_words(claim.created_at) + " ago", claim %>
       <span class="admin">
