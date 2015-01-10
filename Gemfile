@@ -59,6 +59,3 @@ end
 group :production do
   gem 'unicorn'
 end
-
-# PC users
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
