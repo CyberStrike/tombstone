@@ -1,0 +1,43 @@
+<div class="text-center" id="color">
+<%= form_for(@claim) do |f| %>
+  <% if @claim.errors.any? %>
+    
+      <h2><%= pluralize(@claim.errors.count, "error") %> prohibited this Claim from being saved:</h2>
+
+      <ul>
+      <% @claim.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+
+  <% end %>
+
+
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :keyone %><br>
+    <%= f.text_field :keyone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :keytwo %><br>
+    <%= f.text_field :keytwo %>
+  </div>
+   
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+</div>

@@ -10,7 +10,7 @@
     <div class="meta">
       <%= link_to time_ago_in_words(claim.created_at) + " ago", claim %>
       <span class="admin">
-        | <%= link_to "Edit", edit_claim_path(status) %> |
+        | <%= link_to "Edit", edit_claim_path(claim) %> |
         <%= link_to "Delete", claim, method: :delete, data: { confirm: "Are you sure you want to delete this claim?"} %>
         </span>
     </div>
