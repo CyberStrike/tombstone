@@ -1,6 +1,6 @@
 class ClaimsController < ApplicationController
 	before_action :set_claim, only: [:show, :edit, :update, :destroy]
-	before_action :authenticate_user!
+	# before_action :authenticate_user!
 
 	def index
 		@claims = Claim.all
