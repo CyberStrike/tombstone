@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150110234021) do
+ActiveRecord::Schema.define(version: 20150111001742) do
 
   create_table "claims", force: :cascade do |t|
     t.string   "email"
@@ -41,7 +41,10 @@ ActiveRecord::Schema.define(version: 20150110234021) do
     t.text     "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
+
+  add_index "preferences", ["user_id"], name: "index_preferences_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "username",               default: "",    null: false
