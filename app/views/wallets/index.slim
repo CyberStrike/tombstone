@@ -32,3 +32,5 @@
                   .form-group
                     label Secret
                     input.form-control disabled=true value=wallet.secret
+
+      = link_to 'Generate Keys', create_keys_path, class:'btn btn-lg btn-success', method: 'post'
