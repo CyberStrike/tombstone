@@ -15,16 +15,20 @@
                 = render 'form'
       - else
 
-      - @wallets.each do |wallet|
-        = wallet.key
-        = wallet.secret
-      #accordion.panel-group aria-multiselectable="true" role="tablist"
-        .panel.panel-default
-          #headingOne.panel-heading-coinkite role="tab"
-            span.glyphicon = image_tag 'icon-coinkite.svg', class: 'pull-left'
-            h1.panel-title.pull-right
-              a aria-controls="collapseOne" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#collapseOne"
-                | CoinKite
-          #collapseOne.panel-collapse.collapse.in aria-labelledby="headingOne" role="tabpanel"
-            .panel-body
-              = render 'form'
+        - @wallets.each do |wallet|
+
+          #accordion.panel-group aria-multiselectable="true" role="tablist"
+            .panel.panel-default
+              #headingOne.panel-heading-coinkite role="tab"
+                span.glyphicon = image_tag 'icon-coinkite.svg', class: 'pull-left'
+                h1.panel-title.pull-right
+                  a aria-controls="collapseOne" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#collapseOne"
+                    | CoinKite
+              #collapseOne.panel-collapse.collapse.in aria-labelledby="headingOne" role="tabpanel"
+                .panel-body
+                  .form-group
+                    label Api-Key
+                    input.form-control disabled=true value=wallet.key
+                  .form-group
+                    label Secret
+                    input.form-control disabled=true value=wallet.secret
