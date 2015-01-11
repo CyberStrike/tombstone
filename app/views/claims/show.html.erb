@@ -1,0 +1,24 @@
+<h1>Your Claim</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bitcoin Wallet Address:</strong>
+  <%= @claim.btcaddy %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @claim.email %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @claim.status %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_claim_path(@claim) %> |
+<%= link_to 'Back', claims_path %>

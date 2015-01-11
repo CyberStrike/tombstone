@@ -10,6 +10,12 @@ gem 'jquery-rails', '4.0.2'
 gem 'turbolinks', '2.5.3'
 gem 'jbuilder', '2.2.6'
 gem 'bcrypt', '3.1.9'
+gem 'httparty', '0.13.3'
+gem 'byebug'
+gem 'awesome_print'
+gem 'encrypto_signo'
+gem 'openssl'
+
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
