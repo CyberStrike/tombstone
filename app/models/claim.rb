@@ -1,7 +1,7 @@
 class Claim < ActiveRecord::Base
 	belongs_to :user
   before_save :verify_claim
-  #validates :upload, :attachment_presence => true
+  validates :upload, :attachment_presence => true
 
   def verify_claim
     u = self.user
