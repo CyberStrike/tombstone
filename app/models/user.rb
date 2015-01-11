@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   has_one :claim, dependent: :destroy
   has_one :preference
 
+
+
   # Use friendly_id on Users
   extend FriendlyId
   friendly_id :friendify, use: :slugged
