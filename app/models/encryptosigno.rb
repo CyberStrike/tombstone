@@ -1,6 +1,6 @@
 require 'openssl'
 require 'encrypto_signo'
-require 'secureRandom'
+require 'securerandom'
 
 #gernerating key pairs
 keypair = EncryptoSigno.generate_keypair
