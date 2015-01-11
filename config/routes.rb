@@ -1,6 +1,6 @@
 Tombstone::Application.routes.draw do
 
-  root "pages#home"
+  root to: "pages#home"
   get "home", to: "pages#home", as: "home"
   get "wallet", to: "pages#wallet", as: "wallet"
   
