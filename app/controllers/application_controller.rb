@@ -27,7 +27,8 @@ class ApplicationController < ActionController::Base
   
   # Redirects on successful sign in
   def after_sign_in_path_for(resource)
-    inside_path
+    Rails.logger.debug("yooooooooooo bitch")
+    wallets_path
   end
   
   # Auto-sign out locked users

@@ -1,9 +1,8 @@
 Tombstone::Application.routes.draw do
 
-  root "pages#home"    
+  root to: "pages#home"
   get "home", to: "pages#home", as: "home"
-  get "inside", to: "pages#inside", as: "inside"
-  
+  # get "wallet", to: "pages#wallet", as: "wallet"
       
   devise_for :users
   

@@ -1,18 +1,22 @@
-<h1>Claims Index</h1>
+<div class= "contain">
+
+<h1>File a New Claim</h1>
 
 <%= link_to "Post a New Claim", new_claim_path, class: "btn btn-success" %>
 
-<% @claims.each do |claim| %>
+<!-- <%# @claims. do |claim| %>
   <div class="status">
-    <strong>Bitcoin Wallet Address: <%= claim.btcaddy %></strong>
-    <p>Email: <%= claim.email %></p>
-    <p>Status: <%= claim.status %></p>
+    <strong>Bitcoin Wallet Address: <%#= claim.btcaddy %></strong>
+    <p>Email: <%#= claim.email %></p>
+    <p>Status: <%#= claim.status %></p>
     <div class="meta">
-      <%= link_to time_ago_in_words(claim.created_at) + " ago", claim %>
+      <%#= link_to time_ago_in_words(claim.created_at) + " ago", claim %>
       <span class="admin">
-        | <%= link_to "Edit", edit_claim_path(claim) %> |
-        <%= link_to "Delete", claim, method: :delete, data: { confirm: "Are you sure you want to delete this claim?"} %>
+        | <%#= link_to "Edit", edit_claim_path(claim) %> |
+        <%#= link_to "Delete", claim, method: :delete, data: { confirm: "Are you sure you want to delete this claim?"} %>
         </span>
     </div>
   </div>
-<% end %>
+<%# end %> -->
+
+</div>

@@ -11,11 +11,10 @@ gem 'turbolinks', '2.5.3'
 gem 'jbuilder', '2.2.6'
 gem 'bcrypt', '3.1.9'
 gem 'httparty', '0.13.3'
-gem 'byebug'
-gem 'awesome_print'
 gem 'encrypto_signo'
 gem 'openssl'
 gem "paperclip", "~> 4.2"
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
@@ -35,6 +34,8 @@ gem 'bootstrap-sass', '3.3.1.0'
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'byebug'
+  gem 'awesome_print'
 
   # Figaro: https://github.com/laserlemon/figaro
   gem 'figaro', '1.0.0'
@@ -55,5 +56,4 @@ group :production do
   gem 'rails_12factor' # Rails 12factor for Heroku: https://github.com/heroku/rails_12factor
   gem 'pg'# PostgreSQL gem for Heroku
   gem 'unicorn', platforms: [:ruby] # Unicorn: http://unicorn.bogomips.org
-  gem "paperclip", "~> 4.2"
 end

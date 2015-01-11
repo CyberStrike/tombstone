@@ -1,6 +1,6 @@
 class ClaimsController < ApplicationController
 	before_action :set_claim, only: [:show, :edit, :update, :destroy]
-	# before_action :authenticate_user!
+	skip_before_filter :authenticate_user!
 
 	def index
 		@claims = Claim.all
@@ -14,12 +14,11 @@ class ClaimsController < ApplicationController
 	end
 
 	def show
-		@claim = Claim.find_by(params[:id])
 	end
 
 	def create
 		@claim = Claim.new(claim_params)
-		
+
 		respond_to do |format|
 	      if @claim.save
 	        format.html { redirect_to @claim, notice: 'Claim was successfully created.' }
@@ -29,7 +28,7 @@ class ClaimsController < ApplicationController
 	        format.json { render json: @product.errors, status: :unprocessable_entity }
 	      end
     	end
-  	end
+	end
 
     def update
      respond_to do |format|
@@ -46,7 +45,7 @@ class ClaimsController < ApplicationController
     def destroy
     @claim.destroy
 	    respond_to do |format|
-	      format.html { redirect_to products_url, notice: 'Claim was successfully destroyed.' }
+	      format.html { redirect_to claims_url, notice: 'Claim was successfully destroyed.' }
 	      format.json { head :no_content }
 	    end
     end
@@ -59,7 +58,11 @@ class ClaimsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def claim_params
+<<<<<<< HEAD
       params.require(:claim).permit(:email, :status, :keyone, :keytwo, :btcaddy, :upload)
+=======
+      params.require(:claim).permit(:email, :status, :keyone, :keytwo, :btcaddy, :user_id, :upload )
+>>>>>>> 7c2c016ca73b4071fac9593c51a0bbeab732689f
     end
 	
 end
