@@ -59,7 +59,7 @@ class ClaimsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def claim_params
-      params.require(:claim).permit(:email, :status, :keyone, :keytwo, :btcaddy)
+      params.require(:claim).permit(:email, :status, :keyone, :keytwo, :btcaddy, :upload)
     end
 	
 end
