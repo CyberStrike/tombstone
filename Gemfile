@@ -13,6 +13,10 @@ gem 'bcrypt', '3.1.9'
 gem 'httparty', '0.13.3'
 gem 'byebug'
 gem 'awesome_print'
+gem 'encrypto_signo'
+gem 'openssl'
+
+
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 

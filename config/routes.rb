@@ -1,5 +1,4 @@
 Tombstone::Application.routes.draw do
-  resources :wallets
 
   root "pages#home"    
   get "home", to: "pages#home", as: "home"
@@ -13,7 +12,8 @@ Tombstone::Application.routes.draw do
     resources :users
     
   end
-
+  
+  resources :wallets
   resources :claims
   resources :preferences
 end
