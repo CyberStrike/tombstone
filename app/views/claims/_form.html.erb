@@ -10,46 +10,65 @@
       </ul>
 
   <% end %>
-  <div class="form-group">
-    <div class="field">
-      <div class="row">
-          <div class="col-sm-6">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-        </div>
-      </div>
+
+<div class="form-group">
+  <%= f.label :user_id %>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= f.text_field :user_id, class: "form-control" %>
     </div>
   </div>
-
-  <div class="field">
-    <%= f.label :btcaddy %><br>
-    <%= f.text_field :btcaddy %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :keyone %><br>
-    <%= f.text_field :keyone %>
-  </div>
-
-  <div class="field">
-    <%= f.label :keytwo %><br>
-    <%= f.text_field :keytwo %>
-  </div>
-
-  <div class="field">
-    <%= f.label :upload %><br />
-    <%= f.file_field :upload %>
-  </div>
-   
+</div>
   
-  <div class="actions">
-    <%= f.submit %>
+<div class="form-group">
+  <%= f.label :btcaddy %>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= f.text_field :btcaddy, class: "form-control" %>
+    </div>
   </div>
+</div>
 
+<div class="form-group">
+  <%= f.label :email %>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :keyone, "Key One" %>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= f.text_field :keyone, class: "form-control" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :keytwo, "Key Two" %>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= f.text_field :keytwo, class: "form-control" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :upload %>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= f.file_field :upload %>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-6">
+    <%= f.submit "Submit Claim", class: "btn btn-primary" %>
+  </div>
+</div>
+<br>
 <% end %>
