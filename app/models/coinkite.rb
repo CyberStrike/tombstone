@@ -33,6 +33,9 @@ class CoinKite
     @secret = secret
   end
 
+
+  ## Read
+
   def permissions
 
     endpoint = '/v1/my/self'
@@ -48,6 +51,67 @@ class CoinKite
     build_headers(endpoint)
 
     self.class.get(endpoint)
+  end
+
+  def accounts
+    endpoint = '/v1/my/accounts'
+
+    build_headers(endpoint)
+
+    self.class.get(endpoint)
+  end
+
+  ### Account Details
+  def details(ckref)
+
+    endpoint = '/v1/detail/'
+
+    build_headers(endpoint)
+
+    self.class.get(endpoint)
+  end
+
+
+  ## List
+
+
+  ### Unauthorised Sends
+  def unauth_sends
+
+    endpoint = '/v1/list/unauth_sends'
+
+    build_headers(endpoint)
+
+    self.class.get(endpoint)
+  end
+
+
+  ## Update
+
+  def auth_send(ckref, authcode)
+    endpoint = '/v1/update/' + ckref + '/auth_send'
+
+    build_headers(endpoint)
+
+    self.class.put(endpoint, :body => {
+        :authcode => authcode
+    })
+  end
+
+
+  ## Send
+
+  def send_funds(amount, acct, dest)
+
+
+    endpoint = '/v1/new/send'
+    build_headers(endpoint)
+
+    self.class.put(endpoint,
+     :body =>{
+      :amount => amount,
+      :account => acct,
+      :dest => dest})
   end
 
   def permissions?
@@ -85,5 +149,5 @@ class CoinKite
 
 end
 
-# ck = CoinKite.new("K6638a8d7-e4587cb3-94a8672b9ede77a8","Saa414d23-42e45f58-865ed630971a5295")
-# p ck.check_permissions
+ck = CoinKite.new("K6638a8d7-e4587cb3-94a8672b9ede77a8","Saa414d23-42e45f58-865ed630971a5295")
+#   ap ck.list_activity
