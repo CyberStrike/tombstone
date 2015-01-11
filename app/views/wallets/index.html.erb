@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <% @wallets.each do |wallet| %>
+    <% current_user.wallets.each do |wallet| %>
       <tr>
         <td><%= wallet.key %></td>
         <td><%= wallet.secret %></td>

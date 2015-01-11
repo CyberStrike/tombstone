@@ -149,5 +149,5 @@ class CoinKite
 
 end
 
-ck = CoinKite.new("K6638a8d7-e4587cb3-94a8672b9ede77a8","Saa414d23-42e45f58-865ed630971a5295")
+#ck = CoinKite.new("K6638a8d7-e4587cb3-94a8672b9ede77a8","Saa414d23-42e45f58-865ed630971a5295")
 #   ap ck.list_activity
