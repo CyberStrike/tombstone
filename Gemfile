@@ -15,6 +15,7 @@ gem 'encrypto_signo'
 gem 'openssl'
 gem "paperclip", "~> 4.2"
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'executables'
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
