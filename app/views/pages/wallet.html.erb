@@ -1,4 +1,103 @@
 <% title("My Wallet") %>
-<h1>My Wallet</h1>
-<p>This page is only visible to signed in users. Edit it at: <em>views/pages/inside.html.erb</em></p>
-<p>You can change the page users see after successfully signing in within the method <em>after_sign_in_path_for</em> inside <strong>application_controller.rb</strong></p>
+<!-- <div class="container">
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<hr class="fancy-hr"> 
+			<div class="form" id="manage_wallets" style="border-box:">
+				<h2 class="form-title">Manage Wallets</h2>
+				<br>
+				<div class="container">
+					<h1 class="coinkite-title">Coinkite</h1>
+					<br>
+					<input type="text" class="input-std" id="token" placeholder="token">
+					<input type="text" class="input-std" id="secret" placeholder="secret">
+					<br>
+					<button class="btn btn-lg success">Verify</button>
+				</div>
+			</div>
+		</div> 
+	</div>
+</div>-->
+<section class="content-1" style="position:relative; bottom:4em;">
+        <div class="container">
+          
+            	<div class="col-sm-6 text-center">
+              	<!-- <h1>My Wallet</h1>
+				<p>This page is only visible to signed in users. Edit it at: <em>views/pages/inside.html.erb</em></p>
+				<p>You can change the page users see after successfully signing in within the method <em>after_sign_in_path_for</em> inside <strong>application_controller.rb</strong></p> -->
+            	<!-- div class="row box-video" -->
+                <!-- <div class="col-sm-7">
+                  <div class="player">
+                    <iframe id="pPlayer" src="http://player.vimeo.com/video/80282064?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;player_id=pPlayer" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  </div>
+                  <h6>Introduction</h6>
+                  <p>To get started, you select the any sample and base the entire website on it.</p>
+                </div>
+                <div class="col-md-7 center">
+                  < div class="btns">
+                    <a class="btn btn-inverse" href="#"><span class="fui-apple"> </span>Buy in Appstore</a>
+                    <a class="btn btn-primary" href="#"><span class="fui-android"> </span>Buy in Google Play</a>
+                  </div> -->
+                
+					<hr class="fancy-hr"> 
+					<div class="form">
+						<h2 class="form-title">Manage Wallets</h2>
+						<br>
+						<div class="row form-box">
+							<h1 class="coinkite-title">
+	<!-- 							<%= image_tag 'icon-coinkite.svg', style:'float:left;width:35px;padding:3px;' %>
+	 -->							
+	 							Coinkite
+								<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+								<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 width="140px" height="140px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+								<path d="M487.797,556.524H126.078c-12.643,0-22.931-10.288-22.931-22.94V259.701c0-12.643,10.288-22.94,22.931-22.94h361.719
+									c12.662,0,22.95,10.296,22.95,22.94v273.884C510.747,546.237,500.459,556.524,487.797,556.524z M127.292,532.375h359.31V260.906
+									h-359.31V532.375z"/>
+								<g>
+									<path d="M350.362,443.383v37.104c0,6.882-6.675,12.458-14.859,12.458h-2.569v22.264h134.159v-71.826H350.362z"/>
+								</g>
+								<g>
+									<rect x="350.362" y="363.111" width="116.732" height="66.476"/>
+								</g>
+								<g>
+									<path d="M332.935,278.169v22.166h2.569c8.183,0,14.859,5.589,14.859,12.458v37.202h116.732v-71.826H332.935z"/>
+								</g>
+								<g>
+									<path d="M278.391,492.945c-8.204,0-14.862-5.576-14.862-12.458v-37.104H146.145v71.826h134.177v-22.264H278.391z"/>
+								</g>
+								<g>
+									<rect x="146.145" y="363.111" width="117.385" height="66.476"/>
+								</g>
+								<g>
+									<path d="M263.529,312.794c0-6.869,6.658-12.458,14.862-12.458h1.931v-22.166H146.145v71.826h117.385V312.794z"/>
+								</g>
+								<path d="M336.943,471.85c0,3.976-3.224,7.2-7.2,7.2h-45.6c-3.976,0-7.2-3.224-7.2-7.2v-149.6c0-3.976,3.224-7.2,7.2-7.2h45.6
+									c3.976,0,7.2,3.224,7.2,7.2V471.85z"/>
+								</svg>
+							</h1>
+
+							<div class="row">
+								<br>
+								<input type="text" class="input-std" id="token" placeholder="token">
+								<br>
+								<input type="text" class="input-std" id="secret" placeholder="secret">
+								<br>
+								<div class="row">
+								<button class="btn btn-tombstone">Verify</button></li>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">	
+						<div class="row">
+		                  <div class="additional-links">
+		                    Be sure to take a look at our
+		                    <br class="hidden-xs">
+		                    <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+		                  </div>
+		                </div>
+	              	</div>
+            	</div>
+      </section>

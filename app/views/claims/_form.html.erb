@@ -39,7 +39,7 @@
   </div>
 
   <div class="field">
-    <%= form_for @claim, :url => claims_path, :html => { :multipart => true } do |form| %>
+    <%= form_for @claim, :styles => { left: "50%"; right: "50%"; padding: 10px; }, :url => claims_path, :html => { :multipart => true } do |form| %>
     <%= form.file_field :upload %>
 
 </div>
