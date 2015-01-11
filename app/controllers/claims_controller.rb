@@ -45,7 +45,7 @@ class ClaimsController < ApplicationController
     def destroy
     @claim.destroy
 	    respond_to do |format|
-	      format.html { redirect_to products_url, notice: 'Claim was successfully destroyed.' }
+	      format.html { redirect_to claims_url, notice: 'Claim was successfully destroyed.' }
 	      format.json { head :no_content }
 	    end
     end
@@ -58,7 +58,7 @@ class ClaimsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def claim_params
-      params.require(:claim).permit(:email, :status, :keyone, :keytwo, :btcaddy, :user_id)
+      params.require(:claim).permit(:email, :status, :keyone, :keytwo, :btcaddy, :user_id, :upload)
     end
 	
 end
