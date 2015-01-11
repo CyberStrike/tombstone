@@ -1,9 +1,11 @@
-<div class= "contain">
-
-<h1>File a New Claim</h1>
-
-<%= link_to "Post a New Claim", new_claim_path, class: "btn btn-success" %>
-
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-offset-2">
+      <h1>File a New Claim</h1>
+      <%= link_to "Post a New Claim", new_claim_path, class: "btn btn-tombstone" %>
+    </div>
+  </div>
+</div>
 <!-- <%# @claims. do |claim| %>
   <div class="status">
     <strong>Bitcoin Wallet Address: <%#= claim.btcaddy %></strong>
@@ -19,4 +21,3 @@
   </div>
 <%# end %> -->
 
-</div>
