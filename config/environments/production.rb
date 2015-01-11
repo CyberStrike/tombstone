@@ -77,21 +77,20 @@ Tombstone::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { :host => 'stormy-reef-2678.herokuapp.com' }
+  config.action_mailer.perform_deliveries = true
 
   
   # Mailer
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => ENV["https://stormy-reef-2678.herokuapp.com"] }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-      :address        => 'smtp.sendgrid.net',
-      :port           => '587',
-      :authentication => :plain,
-      :user_name      => ENV['ameji012@gmail.com'],
-      :password       => ENV['16567Rexs'],
-      :domain         => 'https://stormy-reef-2678.herokuapp.com',
-      :enable_starttls_auto => true
-      :openssl_verify_mode => 'none'
-
+  ActionMailer::Base.smtp_settings = {
+    :address => 'smtp.sendgrid.net',
+    :port => '587',
+    :authentication => :plain,
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :domain => 'heroku.com'
   }
+  ActionMailer::Base.delivery_method = :smtp
+
 end

@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   has_one :claim, dependent: :destroy
   has_one :preference
 
+
+
   # Use friendly_id on Users
   extend FriendlyId
   friendly_id :friendify, use: :slugged
@@ -19,7 +21,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+         :recoverable, :rememberable, :trackable, :validatable
          
   # Pagination
   paginates_per 100
