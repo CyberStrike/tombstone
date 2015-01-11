@@ -1,0 +1,16 @@
+.container
+  .row
+    .col-lg-6.col-lg-offset-3
+      #accordion.panel-group aria-multiselectable="true" role="tablist"
+        .panel.panel-default
+          #headingOne.panel-heading-coinkite role="tab"
+            a aria-controls="collapseOne" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#collapseOne"
+              span.glyphicon = image_tag 'icon-coinkite.svg', class: 'pull-left'
+            h1.panel-title.pull-right
+              a aria-controls="collapseOne" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#collapseOne"
+                | CoinKite
+          #collapseOne.panel-collapse.collapse.in aria-labelledby="headingOne" role="tabpanel"
+            .panel-body
+              = render 'form'
+
+= link_to 'Back', wallets_path

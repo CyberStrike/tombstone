@@ -4,6 +4,8 @@ class WalletsController < ApplicationController
 
   def index
     @wallets = Wallet.all
+    @wallet = Wallet.new
+
   end
 
   def show

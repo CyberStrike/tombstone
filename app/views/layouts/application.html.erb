@@ -10,14 +10,32 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div id="page-wrapper">
+  <div id="page-wrapper">
       <header class="header-10">
         <%= render 'layouts/navigation' %>
       </header>
+        <% if notice %>
+        <div class="alert alert-warning alert-dismissible" role="alert">
+          <div class="text-center">
+
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <%= notice %>
+          </div>
+        </div>
+    <% end %>
+    <% if alert %>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <div class="text-center">
+
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <%= alert %>
+          </div>
+        </div>
+    <% end %>
         
       <%= yield %>
         
-      <%= render 'layouts/footer' %>    
+      <% render 'layouts/footer' %>
     
     </div>
   </body>

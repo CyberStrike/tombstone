@@ -10,4 +10,19 @@
 @import "projects";
 @import "custom";
 @import "claims";
-@import "wallets"
+@import "wallets";
+
+.panel-default{
+  .panel-heading-coinkite{
+    @extend .panel-heading;
+    background-color: #FF5722;
+    color: white;
+
+  }
+  .panel-title{
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 47px;
+  }
+
+}

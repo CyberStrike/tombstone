@@ -10,17 +10,20 @@
       </ul>
     </div>
   <% end %>
+    <div class="form-group">
+      <%= f.label 'Api-Key' %>
+      <%= f.text_field :key, class:'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :secret %>
+      <%= f.text_field :secret, class:'form-control' %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :key%><br>
-    <%= f.text_field :key%>
-  </div>
-  <div class="field">
-    <%= f.label :secret %><br>
-    <%= f.text_field :secret %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Add Wallet', class:'btn btn-block btn-success' %>
   </div>
 <% end %>
+
 

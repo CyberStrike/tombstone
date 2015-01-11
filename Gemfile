@@ -31,6 +31,8 @@ gem 'font-awesome-sass', '4.2.2'
 # Bootstrap 3: https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '3.3.1.0'
 
+gem 'slim' #loose some weight
+
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
