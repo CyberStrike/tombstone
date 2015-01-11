@@ -1,20 +1,16 @@
 class WalletsController < ApplicationController
   before_action :set_wallet, only: [:show, :edit, :update, :destroy]
 
-  respond_to :html
 
   def index
     @wallets = Wallet.all
-    respond_with(@wallets)
   end
 
   def show
-    respond_with(@wallet)
   end
 
   def new
     @wallet = Wallet.new
-    respond_with(@wallet)
   end
 
   def edit
@@ -23,18 +19,37 @@ class WalletsController < ApplicationController
   def create
     @wallet = Wallet.new(wallet_params)
     @wallet.user = current_user
-    @wallet.save
-    respond_with(@wallet)
+
+    respond_to do |format|
+      if @wallet.save
+        format.html { redirect_to wallets_path, notice: 'Wallet was successfully created.' }
+        format.json { render :show, status: :created, location: @wallet }
+      else
+        format.html { render :new }
+        format.json { render json: @wallet.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def update
-    @wallet.update(wallet_params)
-    respond_with(@wallet)
+    respond_to do |format|
+      if @wallet.update(wallet_params)
+        format.html { redirect_to wallets_path, notice: 'Wallet was successfully updated.' }
+        format.json { render :show, status: :ok, location: @wallet }
+      else
+        format.html { render :edit }
+        format.json { render json: @wallet.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
-    @wallet.destroy
-    respond_with(@wallet)
+    respond_to do |format|
+      if @wallet.destroy
+        format.html { redirect_to wallets_path, notice: 'Wallet was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    end
   end
 
   private

@@ -14,12 +14,11 @@ class ClaimsController < ApplicationController
 	end
 
 	def show
-		@claim = Claim.find_by(params[:id])
 	end
 
 	def create
 		@claim = Claim.new(claim_params)
-		
+
 		respond_to do |format|
 	      if @claim.save
 	        format.html { redirect_to @claim, notice: 'Claim was successfully created.' }
@@ -29,7 +28,7 @@ class ClaimsController < ApplicationController
 	        format.json { render json: @product.errors, status: :unprocessable_entity }
 	      end
     	end
-  	end
+	end
 
     def update
      respond_to do |format|
