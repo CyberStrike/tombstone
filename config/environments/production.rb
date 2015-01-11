@@ -81,17 +81,14 @@ Tombstone::Application.configure do
   
   # Mailer
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => ENV["https://stormy-reef-2678.herokuapp.com"] }
+  config.action_mailer.default_url_options = { :host => "https://stormy-reef-2678.herokuapp.com" }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       :address        => 'smtp.sendgrid.net',
       :port           => '587',
       :authentication => :plain,
-      :user_name      => ENV['ameji012@gmail.com'],
-      :password       => ENV['16567Rexs'],
-      :domain         => 'https://stormy-reef-2678.herokuapp.com',
-      :enable_starttls_auto => true
-      :openssl_verify_mode => 'none'
-
+      :user_name      => 'ameji012@gmail.com',
+      :password       => '16567Rexs',
+      :domain         => 'heroku.com'
   }
 end
