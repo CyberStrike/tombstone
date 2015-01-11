@@ -8,7 +8,7 @@ class Wallet < ActiveRecord::Base
   def verify_wallet
     ck = CoinKite.new(key, secret)
 
-    if ck.check_permissions
+    if ck.permissions?
       self.errors.add(:form,'Wrong Key or Secret')
       false
     end
