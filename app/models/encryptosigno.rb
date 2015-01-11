@@ -34,6 +34,4 @@ elsif key_join == claim_key2
   p EncryptoSigno.verify(public_key, claim_key2, string)
 else
   p "retry"
-end
-
-
+end 

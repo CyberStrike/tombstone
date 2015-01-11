@@ -55,4 +55,5 @@ group :production do
   gem 'rails_12factor' # Rails 12factor for Heroku: https://github.com/heroku/rails_12factor
   gem 'pg'# PostgreSQL gem for Heroku
   gem 'unicorn', platforms: [:ruby] # Unicorn: http://unicorn.bogomips.org
+  gem "paperclip", "~> 4.2"
 end
