@@ -14,6 +14,7 @@ gem 'httparty', '0.13.3'
 gem 'encrypto_signo'
 gem 'openssl'
 gem "paperclip", "~> 4.2"
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
