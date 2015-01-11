@@ -11,16 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150111021526) do
+=======
+ActiveRecord::Schema.define(version: 20150111030035) do
+>>>>>>> 127f953f5c6077f6a1e6d3db9c63ff4a20033fbd
 
   create_table "claims", force: :cascade do |t|
     t.string   "email"
     t.string   "status"
     t.string   "keyone"
     t.string   "keytwo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "btcaddy"
+    t.string   "upload_file_name"
+    t.string   "upload_content_type"
+    t.integer  "upload_file_size"
+    t.datetime "upload_updated_at"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

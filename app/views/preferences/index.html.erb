@@ -1,0 +1,24 @@
+<h2><%= link_to 'new thing to do', new_preference_path(@preference) %></h2>
+  
+</div>
+
+<table class="gridtable">
+  
+    
+      
+  <tbody>
+    
+    <% @preferences.each do |preference| %>
+        <tr>
+          
+          <td><%= preference.altbtcaddy %> </td>
+          <td><%= preference.message%> </td>     
+          <td> Created <%= time_ago_in_words preference.created_at %> ago </td>        
+          <td> Updated <%= time_ago_in_words preference.updated_at %> ago </td>      
+          <td><%= link_to 'Edit', edit_preference_path(preference) %> </td>
+          <td><%= link_to 'Destroy',preference_path(preference), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+        </tr>
+    <% end %>
+    
+  </tbody>
+</table>

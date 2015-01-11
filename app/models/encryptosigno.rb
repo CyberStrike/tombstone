@@ -33,6 +33,4 @@ elsif sig_join == claim_key2
   p EncryptoSigno.verify(public_key, claim_key2, token)
 else
   p "retry"
-end
-
-
+end 
