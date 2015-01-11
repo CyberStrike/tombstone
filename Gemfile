@@ -15,7 +15,7 @@ gem 'byebug'
 gem 'awesome_print'
 gem 'encrypto_signo'
 gem 'openssl'
-
+gem "paperclip", "~> 4.2"
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
