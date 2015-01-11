@@ -1,0 +1,30 @@
+
+.container
+  .row
+    .col-lg-6.col-lg-offset-3
+      - if @wallets.empty?
+        #accordion.panel-group aria-multiselectable="true" role="tablist"
+          .panel.panel-default
+            #headingOne.panel-heading-coinkite role="tab"
+              span.glyphicon = image_tag 'icon-coinkite.svg', class: 'pull-left'
+              h1.panel-title.pull-right
+                a aria-controls="collapseOne" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#collapseOne"
+                  | CoinKite
+            #collapseOne.panel-collapse.collapse.in aria-labelledby="headingOne" role="tabpanel"
+              .panel-body
+                = render 'form'
+      - else
+
+      - @wallets.each do |wallet|
+        = wallet.key
+        = wallet.secret
+      #accordion.panel-group aria-multiselectable="true" role="tablist"
+        .panel.panel-default
+          #headingOne.panel-heading-coinkite role="tab"
+            span.glyphicon = image_tag 'icon-coinkite.svg', class: 'pull-left'
+            h1.panel-title.pull-right
+              a aria-controls="collapseOne" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#collapseOne"
+                | CoinKite
+          #collapseOne.panel-collapse.collapse.in aria-labelledby="headingOne" role="tabpanel"
+            .panel-body
+              = render 'form'

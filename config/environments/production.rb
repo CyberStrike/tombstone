@@ -91,6 +91,7 @@ Tombstone::Application.configure do
       :password       => ENV['16567Rexs'],
       :domain         => 'https://stormy-reef-2678.herokuapp.com',
       :enable_starttls_auto => true
+      :openssl_verify_mode => 'none'
 
   }
 end
