@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150111030035) do
+ActiveRecord::Schema.define(version: 20150111060417) do
 
   create_table "claims", force: :cascade do |t|
     t.string   "email"
@@ -25,7 +25,10 @@ ActiveRecord::Schema.define(version: 20150111030035) do
     t.string   "upload_content_type"
     t.integer  "upload_file_size"
     t.datetime "upload_updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "claims", ["user_id"], name: "index_claims_on_user_id"
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
