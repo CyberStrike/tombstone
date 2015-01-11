@@ -8,15 +8,14 @@ private_key = keypair.to_s
 public_key  = keypair.public_key.to_s
 
 #signing of private key
-string = SecureRandom.base64
-signature = EncryptoSigno.sign(private_key, string)
+token = SecureRandom.base64
+signature = EncryptoSigno.sign(private_key, token)
 
-key = signature
-key_join = key.split.join
-key_by_2 = (key.split.join.size / 2)
+sig_join = signature.split.join
+signature_by_2 = (sig_join.size / 2)
 
-user1_key = key.split.join[0..key_by_2]
-user2_key = key.split.join[(key_by_2 + 1)..key_join.size]
+user1_key = sig_join[0..signature_by_2]
+user2_key = sig_join[(signature_by_2 + 1)..sig_join.size]
 
 
 #after user is deseased a claim key is used to unlock account
@@ -26,14 +25,12 @@ claim_key2 = user2_key + user1_key
 
 
 #matches claim key to original key
-if key_join == claim_key
+if sig_join == claim_key
   p "ok"
-  p EncryptoSigno.verify(public_key, claim_key, string)
-elsif key_join == claim_key2
+  p EncryptoSigno.verify(public_key, claim_key, token)
+elsif sig_join == claim_key2
   p "ok"
-  p EncryptoSigno.verify(public_key, claim_key2, string)
+  p EncryptoSigno.verify(public_key, claim_key2, token)
 else
   p "retry"
-end
-
-
+end 

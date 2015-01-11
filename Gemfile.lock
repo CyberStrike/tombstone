@@ -52,6 +52,10 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.5)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -111,6 +115,11 @@ GEM
       mini_portile (~> 0.6.0)
     openssl (1.0.0.beta)
     orm_adapter (0.5.0)
+    paperclip (4.2.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.18.1)
     rack (1.6.0)
     rack-test (0.6.3)
@@ -205,6 +214,7 @@ DEPENDENCIES
   jquery-rails (= 4.0.2)
   kaminari (= 0.16.1)
   openssl
+  paperclip (~> 4.2)
   pg
   rails (= 4.2.0)
   rails_12factor
