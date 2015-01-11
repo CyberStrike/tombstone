@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_many :wallets, dependent: :destroy
   has_one :claim, dependent: :destroy
   has_one :preference
+  user.skip_confirmation!
 
 
   # Use friendly_id on Users

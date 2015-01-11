@@ -89,7 +89,8 @@ Tombstone::Application.configure do
       :authentication => :plain,
       :user_name      => ENV['ameji012@gmail.com'],
       :password       => ENV['16567Rexs'],
-      :domain         => 'heroku.com',
+      :domain         => 'https://stormy-reef-2678.herokuapp.com',
       :enable_starttls_auto => true
+
   }
 end
