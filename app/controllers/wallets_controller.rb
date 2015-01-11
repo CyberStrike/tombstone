@@ -22,6 +22,7 @@ class WalletsController < ApplicationController
 
   def create
     @wallet = Wallet.new(wallet_params)
+    @wallet.user = current_user
     @wallet.save
     respond_with(@wallet)
   end
