@@ -1,7 +1,7 @@
 class PreferencesController < ApplicationController
 
 	before_action :set_preference, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
 
 	def index
 		@preferences = Preference.all
@@ -60,7 +60,7 @@ class PreferencesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def claim_params
-      params.require(:preference).permit(:altbtcaddy, :message)
+      params.require(:preference).permit(:altbtcaddy, :message, :user_id)
     end
 	
 end

@@ -1,0 +1,33 @@
+<div class="text-center" id="color">
+<%= form_for(@preference) do |f| %>
+  <% if @preference.errors.any? %>
+    
+      <h2><%= pluralize(@preference.errors.count, "error") %> prohibited this preference from being saved:</h2>
+
+      <ul>
+      <% @preference.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+
+  <% end %>
+
+  <div class="field">
+    <%= f.label :altbtcaddy %><br>
+    <%= f.text_field :altbtcaddy %>
+  </div>
+
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_field :message %>
+  </div>
+  
+  
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+</div>  

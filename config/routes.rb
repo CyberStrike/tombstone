@@ -15,5 +15,5 @@ Tombstone::Application.routes.draw do
   end
 
   resources :claims
-  
+  resources :preferences
 end
