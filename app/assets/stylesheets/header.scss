@@ -3082,7 +3082,7 @@ section * {
   position: relative;
   z-index: 50;
   height: 800px;
-  background-color: #1b1f23;
+  background: url('http://subtlepatterns.com/patterns/escheresque_ste.png');
   color: white;
   text-align: center;
 }
@@ -3141,7 +3141,7 @@ section * {
   filter: alpha(opacity=20);
 }
 .header-10-sub .hero-unit {
-  padding: 0;
+  padding: 10%;
   margin: 0;
   background-color: transparent;
 }
