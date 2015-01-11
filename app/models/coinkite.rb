@@ -50,17 +50,15 @@ class CoinKite
     self.class.get(endpoint)
   end
 
-  def check_permissions
-    if permissions["api_key"].present?
-        permissions["api_key"]["permissions"].include?("send" && "read" && "send2" && "xfer")
+  def permissions?
+    if permissions["api_key"].nil? != true
+      return (permissions["api_key"]["permissions"].include?("send" && "read" && "send2" && "xfer")) if permissions["api_key"].present?
     else
-      permissions["message"]
+      return permissions["message"]
     end
   end
 
-
   private
-
 
   def sign(endpoint)
     require 'openssl'
