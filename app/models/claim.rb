@@ -2,7 +2,7 @@ class Claim < ActiveRecord::Base
 	belongs_to :user
   before_save :verify_claim
   #validates :upload, :attachment_presence => true
-  EmpAttachment.new(picture: open("#{Rails.root}/features/support/rails.png"))
+
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
