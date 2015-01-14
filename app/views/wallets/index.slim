@@ -17,7 +17,7 @@
                 = render 'form'
       - else
 
-        - @wallets.each do |wallet|
+        - current_user.wallets.each do |wallet|
           #accordion.panel-group aria-multiselectable="true" role="tablist"
             .panel.panel-default
               #headingOne.panel-heading-coinkite role="tab"

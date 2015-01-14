@@ -40,13 +40,12 @@ class Claim < ActiveRecord::Base
 
   def closing_account
     send_of_funds
-    flash[:notice] = "You have succesfully sent the funds please allow up to 1-2 hours for processing."
   end
 
 
   private
   def send_of_funds
-    u = self.user.wallets.take
+    u=User.find(user_id).wallets.take
     ck = CoinKite.new(u.key, u.secret)
     next_step = ck.send_funds(0.0001, 0, btcaddy)
     ckref = next_step['result']['CK_refnum']
