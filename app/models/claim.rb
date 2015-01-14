@@ -2,8 +2,8 @@ class Claim < ActiveRecord::Base
   belongs_to :user
   has_many :wallets, through: :user
   before_save :verify_claim
-  #before_save :verify_btcaddy
-  
+  after_save :send_of_funds
+
   has_attached_file :upload, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :upload, :content_type => /\Aimage\/.*\Z/
   validates :upload, :attachment_presence => true
@@ -11,8 +11,6 @@ class Claim < ActiveRecord::Base
   # validates_attachment :avatar, :presence => true,
   # :content_type => { :content_type => "image/jpeg" },
   # :size => { :in => 0..7000.kilobytes }
-
-
 
 
 
@@ -39,7 +37,9 @@ class Claim < ActiveRecord::Base
 
 
   def closing_account
+
     send_of_funds
+
   end
 
 
@@ -50,7 +50,7 @@ class Claim < ActiveRecord::Base
     next_step = ck.send_funds(0.0001, 0, btcaddy)
     ckref = next_step['result']['CK_refnum']
     authcode = next_step['result']['send_authcode']
-    ck.auth_send(ckref, authcode)
+    logger.debug ck.auth_send(ckref, authcode)
   end
 
 end
